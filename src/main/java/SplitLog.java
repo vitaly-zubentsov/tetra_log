@@ -7,6 +7,6 @@ public class SplitLog {
      */
 
     public String[] toSplitLogs(String stringWithLogs) {
-        return stringWithLogs.split("0\\d\\.\\d{5},", -1);
+        return stringWithLogs.split("(?=0\\d\\.\\d{5},)", -1);
     }
 }
