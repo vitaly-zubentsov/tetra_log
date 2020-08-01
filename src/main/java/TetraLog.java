@@ -7,8 +7,10 @@ public class TetraLog {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        //Загружаем логи из файла
         Loader loader = new Loader();
-        String stringWithLogs = loader.downloadLogFromFile("src/main/resources/commutation.txt");
+        String stringWithLogs =
+                loader.downloadLogFromFile("src/main/resources/logWithCommutationMessages.txt");
 
         //Проверяем что строка из файла содержит данные
         if (Objects.requireNonNull(stringWithLogs).isEmpty()) {
