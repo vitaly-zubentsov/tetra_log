@@ -11,7 +11,7 @@ public class ParseCommutationMessages {
         return Arrays.stream(arrayOfLogs).filter(PATTERN_FOR_ALL_SEARCHING_COMMUTATION_MESSAGES.asPredicate()).toArray(String[]::new);
     }
 
-    public CommutationLogMessage[] parseCommutationMessages() {
+    public CommutationLogMessage[] getArrayOfObjectWithCommutationData(String[] arrayOfCommutationMessages) {
         //TODO реализовать разбор сообщений
 
         return new CommutationLogMessage[]{new CommutationLogMessage(
