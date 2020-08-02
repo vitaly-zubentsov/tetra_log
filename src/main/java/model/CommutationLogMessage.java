@@ -3,14 +3,15 @@ package model;
 public class CommutationLogMessage extends LogMessage {
 
 
-    private final short senderCENumber;
-    private final short senderTimeslotNumber;
-    private final short senderUsageMarker;
-    private final short senderID;
 
-    private final short[] receiverCENumber;
+    private final int senderCENumber;
+    private final int senderTimeslotNumber;
+    private final int senderUsageMarker;
+    private final int senderID;
 
-    public CommutationLogMessage(short senderCENumber, short senderTimeslotNumber, short senderUsageMarker, short senderID, short[] receiverCENumber) {
+    private final int[] receiverCENumber;
+
+    public CommutationLogMessage(int senderCENumber, int senderTimeslotNumber, int senderUsageMarker, int senderID, int[] receiverCENumber) {
         this.senderCENumber = senderCENumber;
         this.senderTimeslotNumber = senderTimeslotNumber;
         this.senderUsageMarker = senderUsageMarker;
@@ -18,24 +19,23 @@ public class CommutationLogMessage extends LogMessage {
         this.receiverCENumber = receiverCENumber;
     }
 
-
-    public short getSenderCENumber() {
+    public int getSenderCENumber() {
         return senderCENumber;
     }
 
-    public short getSenderTimeslotNumber() {
+    public int getSenderTimeslotNumber() {
         return senderTimeslotNumber;
     }
 
-    public short getSenderUsageMarker() {
+    public int getSenderUsageMarker() {
         return senderUsageMarker;
     }
 
-    public short getSenderID() {
+    public int getSenderID() {
         return senderID;
     }
 
-    public short[] getReceiverCENumber() {
+    public int[] getReceiverCENumber() {
         return receiverCENumber;
     }
 

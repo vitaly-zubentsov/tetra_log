@@ -17,7 +17,7 @@ public class CommutationLogTests extends TestBase {
                         "src/test/resources/commutation/logWithCommutationMessages.txt");
 
         //Проверяем, что количество сообщений совпадает с ожидаемым
-        Assert.assertEquals(10, arrayOfCommutationMessages.length);
+        Assert.assertEquals(50, arrayOfCommutationMessages.length);
 
         String onlyCommutationMessagesFromFile =
                 downloadLogsFromFile("src/test/resources/commutation/logWithOnlyCommutationMessages.txt");
@@ -47,7 +47,7 @@ public class CommutationLogTests extends TestBase {
                         "src/test/resources/commutation/logWithOnlyCommutationMessages.txt");
 
         //Проверяем, что количество сообщений совпадает с ожидаемым
-        Assert.assertEquals(10, arrayOfCommutationMessages.length);
+        Assert.assertEquals(50, arrayOfCommutationMessages.length);
 
         String onlyCommutationMessagesFromFile =
                 downloadLogsFromFile("src/test/resources/commutation/logWithOnlyCommutationMessages.txt");
