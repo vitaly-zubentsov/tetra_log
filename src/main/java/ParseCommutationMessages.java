@@ -1,3 +1,5 @@
+import model.CommutationLogMessage;
+
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
@@ -9,8 +11,21 @@ public class ParseCommutationMessages {
         return Arrays.stream(arrayOfLogs).filter(PATTERN_FOR_ALL_SEARCHING_COMMUTATION_MESSAGES.asPredicate()).toArray(String[]::new);
     }
 
-    public void parseCommutationMessages() {
+    public CommutationLogMessage[] parseCommutationMessages() {
         //TODO реализовать разбор сообщений
+
+        return new CommutationLogMessage[]{new CommutationLogMessage(
+                "афыва",
+                true,
+                1,
+                1,
+                new int[]{1, 2, 3},
+                1,
+                1,
+                1,
+                1,
+                1
+        )};
     }
 
 }
