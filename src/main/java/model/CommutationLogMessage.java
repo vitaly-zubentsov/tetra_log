@@ -1,5 +1,8 @@
 package model;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class CommutationLogMessage extends LogMessage {
 
     //Поля заголовка сообщения
@@ -114,5 +117,47 @@ public class CommutationLogMessage extends LogMessage {
 
     public int getSenderID() {
         return senderID;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CommutationLogMessage that = (CommutationLogMessage) o;
+        return isStartConnection == that.isStartConnection &&
+                ceNumber == that.ceNumber &&
+                timeSlot == that.timeSlot &&
+                receiverUM == that.receiverUM &&
+                receiverID == that.receiverID &&
+                senderCE == that.senderCE &&
+                senderUM == that.senderUM &&
+                senderID == that.senderID &&
+                idWithDate.equals(that.idWithDate) &&
+                Arrays.equals(receiverCE, that.receiverCE);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(idWithDate, isStartConnection, ceNumber, timeSlot, receiverUM, receiverID, senderCE, senderUM, senderID);
+        result = 31 * result + Arrays.hashCode(receiverCE);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "CommutationLogMessage{" +
+                "idWithDate='" + idWithDate + '\'' +
+                ", isStartConnection=" + isStartConnection +
+                ", ceNumber=" + ceNumber +
+                ", timeSlot=" + timeSlot +
+                ", receiverCE=" + Arrays.toString(receiverCE) +
+                ", receiverUM=" + receiverUM +
+                ", receiverID=" + receiverID +
+                ", senderCE=" + senderCE +
+                ", senderUM=" + senderUM +
+                ", senderID=" + senderID +
+                '}';
     }
 }

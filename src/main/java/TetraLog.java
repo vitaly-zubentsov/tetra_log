@@ -1,4 +1,3 @@
-
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Objects;
@@ -29,9 +28,8 @@ public class TetraLog {
         ParseCommutationMessages parseCommutationMessages = new ParseCommutationMessages();
         String[] arrayOfCommutationMessages = parseCommutationMessages.getCommutationMessageFromLog(arrayOfLogs);
 
-
         //Выводим список коммутации
-        Arrays.stream(arrayOfCommutationMessages).forEach(System.out::println);
+        Arrays.stream(parseCommutationMessages.getArrayOfObjectWithCommutationData(arrayOfCommutationMessages)).forEach(System.out::println);
 
     }
 

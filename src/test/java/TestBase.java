@@ -1,6 +1,7 @@
 import model.CommutationLogMessage;
 
 import java.io.FileNotFoundException;
+import java.util.Collection;
 
 /**
  * Базовый класс тестов, содержит методы используемые другими классами тестов
